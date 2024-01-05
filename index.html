@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Obter IP</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <script>
+        function obterIP() {
+            fetch('https://api64.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('ip-container').innerText = "Seu endereço IP é: " + data.ip;
+                })
+                .catch(error => console.error('Erro ao obter IP:', error));
+            //
+        }
+    </script>
 </head>
 <body>
-$END$
+<button onclick="obterIP()">Obter IP</button>
+<div id="ip-container"></div>
 </body>
 </html>
