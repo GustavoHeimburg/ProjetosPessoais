@@ -4,7 +4,6 @@ function obterIP() {
         .then(data => {
             document.getElementById('ip-container').innerText = "Seu endereço IP é: " + data.ip;
 
-            // Chama o backend PHP para salvar o IP no banco de dados
             salvarIPNoBanco(data.ip);
         })
         .catch(error => console.error('Erro ao obter IP:', error));
@@ -18,7 +17,7 @@ function salvarIPNoBanco(ip) {
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4) {
             if (xhr.status == 200) {
-                console.log(xhr.responseText); // Exibe a resposta do servidor (pode ser removido em produção)
+                console.log(xhr.responseText);
             } else {
                 console.error('Erro ao salvar IP:', xhr.status, xhr.statusText);
             }
