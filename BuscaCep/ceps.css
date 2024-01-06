@@ -51,7 +51,6 @@ button:hover {
     margin-bottom: 10px;
 }
 
-/* Adicionando um estilo básico de responsividade */
 @media (max-width: 600px) {
     #cepInput {
         width: 100%;

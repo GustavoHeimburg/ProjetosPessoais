@@ -1,6 +1,6 @@
 function buscarCEP() {
     const cepInput = document.getElementById('cepInput');
-    const cep = cepInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    const cep = cepInput.value.replace(/\D/g, '');
 
     if (cep.length !== 8) {
         alert('CEP inválido. Por favor, insira um CEP válido.');
