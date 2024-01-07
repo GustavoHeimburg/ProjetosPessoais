@@ -2,7 +2,7 @@ function buscarCEP() {
     const cepInput = document.getElementById('cepInput');
     const cep = cepInput.value.replace(/\D/g, '');
 
-    if (cep.length !== 8) {
+    if (cep.length !== 8 && cep.length !== 9) {
         alert('CEP inválido. Por favor, insira um CEP válido.');
         return;
     }
