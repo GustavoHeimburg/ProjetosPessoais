@@ -18,6 +18,6 @@ function calcularInvestimento() {
     resultadoDiv.innerHTML = `
         <p><strong>Resultado sem Investir:</strong> R$ ${resultadoSemInvestir.toFixed(2)}</p>
         <p><strong>Rendimento Total:</strong> R$ ${rendimento.toFixed(2)}</p>
-        <p><strong>Valor Final:</strong> R$ ${(rendimento).toFixed(2)}</p>
+        <p><strong>Valor Final:</strong> R$ ${(valorInicial + rendimento).toFixed(2)}</p>
     `;
 }
