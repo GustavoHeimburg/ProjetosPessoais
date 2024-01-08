@@ -8,28 +8,31 @@
 </head>
 <body>
 
-<!-- Campos de entrada -->
-<label for="valorInicial">Valor Inicial:</label>
-<input type="number" id="valorInicial" placeholder="R$">
+<div class="container">
+    <h1>Calculadora de Investimentos</h1>
 
-<label for="taxaRendimento">Taxa de Rendimento (% ao ano):</label>
-<input type="number" id="taxaRendimento" placeholder="%">
+    <!-- Campos de entrada -->
+    <label for="valorInicial">Valor Inicial:</label>
+    <input type="number" id="valorInicial" placeholder="R$">
 
-<!-- Escolha entre Meses e Anos -->
-<label for="unidadeTempo">Unidade de Tempo:</label>
-<select id="unidadeTempo">
-    <option value="meses">Meses</option>
-    <option value="anos">Anos</option>
-</select>
+    <label for="taxaRendimento">Taxa de Rendimento (% ao ano):</label>
+    <input type="number" id="taxaRendimento" placeholder="%">
 
-<!-- Campo de entrada para o prazo -->
-<label for="prazo">Prazo:</label>
-<input type="number" id="prazo" placeholder="Meses ou Anos">
+    <!-- Escolha entre Meses e Anos -->
+    <label for="unidadeTempo">Unidade de Tempo:</label>
+    <select id="unidadeTempo">
+        <option value="meses">Meses</option>
+        <option value="anos">Anos</option>
+    </select>
 
-<button onclick="calcularInvestimento()">Calcular</button>
+    <label for="prazo">Prazo:</label>
+    <input type="number" id="prazo" placeholder="Meses ou Anos">
 
-<!-- Área de resultado -->
-<div id="resultado"></div>
+    <button onclick="calcularInvestimento()">Calcular</button>
+
+    <!-- Área de resultado -->
+    <div id="resultado"></div>
+</div>
 
 <script src="Calc.js"></script>
 </body>
