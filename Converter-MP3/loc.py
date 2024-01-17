@@ -14,18 +14,14 @@ def convert():
 
     if video_url:
         try:
-            # Verifica se o youtube-dl está disponível
             if subprocess.call("youtube-dl --version", shell=True) != 0:
                 raise RuntimeError("O youtube-dl não está instalado ou não está disponível no PATH.")
 
-            # Converte o vídeo para MP3
             os.system(f'youtube-dl -x --audio-format mp3 -o "downloads/%(title)s.%(ext)s" {video_url}')
 
-            # Obtém o nome do arquivo convertido
             filename = subprocess.check_output(f'youtube-dl --get-filename -o "downloads/%(title)s.%(ext)s" {video_url}', shell=True)
             filename = filename.decode('utf-8').strip()
 
-            # Obtém a URL de download do MP3
             download_url = f'/downloads/{filename}'
 
             return jsonify({'success': True, 'downloadUrl': download_url})
